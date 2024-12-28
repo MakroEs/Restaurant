@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Menus from "./Menu";
+import Menu from "./Menu";
 import CartIcon from "./CartIcon";
 import Image from "next/image";
 
@@ -11,7 +11,7 @@ const Navbar = () => {
       {/* Left link */}
       <div className="hidden md:flex gap-4 flex-1">
         <Link href="/">Homepage</Link>
-        <Link href="/Menu">Menu</Link>
+        <Link href="/menu">Menu</Link>
         <Link href="/">Contact</Link>
       </div>
       {/* Logo */}
@@ -20,7 +20,7 @@ const Navbar = () => {
       </div>
       {/* mobile menu */}
       <div className=" md:hidden">
-        <Menus />
+        <Menu />
       </div>
       {/* Right link */}
       <div className="hidden md:flex gap-4 items-center justify-end flex-1    ">

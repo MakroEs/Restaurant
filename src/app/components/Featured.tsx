@@ -14,7 +14,7 @@ const Featured = () => {
           >
             {/* IMAGE CONTAINER */}
             {item.img && (
-              <div className="relative w-full h-[20vh] hover:rotate-[5deg] transition-all duration-500">
+              <div className="relative w-full  h-[20vh] md:h-[35vh] hover:rotate-[5deg] transition-all duration-500">
                 <Image
                   src={item.img}
                   alt={item.title}
