@@ -4,32 +4,30 @@ import React from "react";
 
 const Featured = () => {
   return (
-    <div className="w-full text-red-500 px-4 sm:px-8">
-      {/* GRID WRAPPER */}
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 gap-4 p-2 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="w-screen overflow-x-scroll text-red-500">
+      {/* WRAPPER */}
+      <div className="w-max flex">
+        {/* SINGLE ITEM */}
         {featuredProducts.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col items-center justify-around p-2 hover:bg-fuchsia-50 transition-all duration-300 border rounded-md"
+            className="w-screen h-[60vh] flex flex-col items-center justify-around p-4 hover:bg-fuchsia-50 transition-all duration-300 md:w-[50vw] xl:w-[33vw] xl:h-[90vh]"
           >
             {/* IMAGE CONTAINER */}
             {item.img && (
-              <div className="relative w-full  h-[20vh] md:h-[35vh] hover:rotate-[5deg] transition-all duration-500">
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  fill
-                  className="object-contain"
-                />
+              <div className="relative flex-1 w-full hover:rotate-[60deg] transition-all duration-500">
+                <Image src={item.img} alt="" fill className="object-contain" />
               </div>
             )}
             {/* TEXT CONTAINER */}
-            <div className="flex flex-col items-center justify-center text-center gap-1">
-              <h1 className="text-sm font-bold uppercase">{item.title}</h1>
-              <p className="text-xs">{item.desc}</p>
-              <span className="text-sm font-bold">${item.price}</span>
-              <button className="bg-red-500 text-white text-xs px-2 py-1 rounded-md">
-                Add to cart
+            <div className=" flex-1 flex flex-col items-center justify-center text-center gap-4">
+              <h1 className="text-xl font-bold uppercase xl:text-2xl 2xl:text-3xl">
+                {item.title}
+              </h1>
+              <p className="p-4 2xl:p-8">{item.desc}</p>
+              <span className="text-xl font-bold">${item.price}</span>
+              <button className="bg-red-500 text-white p-2 rounded-md">
+                Add to Cart
               </button>
             </div>
           </div>
